@@ -34,13 +34,13 @@ $(function(){
 	*/
 	var $btn_open 			= $('.btn-open');
 	var $btn_close 			= $('.btn-close');
-	var $dropdowm_menu 	= $('.dropdown-menu > ul');
+	var $dropdowm_menu 	= $('.dropdown-menu > .menu-content');
 	
 	$btn_open.click(function(event){
 		 event.stopPropagation();
 		 event.preventDefault();
 
-		 $(this).parents('.dropdown-menu').find('ul').toggleClass('is-open');		 
+		 $(this).parents('.dropdown-menu').find('.menu-content').toggleClass('is-open');		 
 	});
 
 	$btn_close.click(function(event){

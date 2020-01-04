@@ -1,18 +1,101 @@
 .header{
 	padding: rem(8) 0 rem(8);
-	background-color: $main-bg;
+	max-height: rem(46);
+	height: auto;
+	background-color: $main-black;
 
 		&-content{
-			display: flex;
-			justify-content: center;
+			@include row-flex();
 			width: 100%;
-			
-				&__greeting-section{
-					@include font(em(18), 500);
+			position: relative;
+		}
 
-					margin: rem(12) 0 rem(20);
-					color: $main-dark-grey;
+		.menu-content{
+			visibility: hidden;
+			display: none;
+			position: absolute;
+			right: rem(22);
+			z-index: -1;
+			background-color: $main-2a2a;
+
+				&.is-open{
+					max-width: rem(230);
+					width: 100%;
+					visibility: visible;
+					display: flex;
+					flex-direction: column;
+					z-index: 1000;
+					top: rem(32);
+					animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 				}
+		}
+
+		.account-setting{
+			@include col();
+			@include size(3);
+			@include size-md(12);
+
+			display: flex;
+			justify-content: flex-end;
+
+			.btn-open{
+				border: none;
+				background-color: transparent;
+				color: $main-white;
+			}
+
+				&__navigation{
+					padding: rem(8) 0 rem(4);
+				}
+
+				&__link{
+					@include font(em(14), 500);
+					padding: rem(8) 0 rem(8) rem(12);
+					display: flex;
+					justify-content: flex-start;
+					color: $invis-menu-txt;
+					border-bottom: 1px solid $main-4343;
+					@include transition($easeInOut-2s, color);
+
+						&:last-child{
+							border-bottom: 0;
+						}
+
+						&:hover{
+							color: $mark-green;
+						}
+						
+						.link-txt{
+							display: inline-flex;
+						}
+
+						.link-icon{
+							width: rem(25);
+						}
+				}
+		}
+
+		.socialmedia-block{
+			@include col();
+			@include size(9);
+			@include size-md(12);
+		}
+
+		.social-media{
+			display: flex;
+
+			&__li{
+				margin-right: rem(22);
+
+					&:last-child{
+						margin-right: 0;
+					}
+			}
+			
+			&__link{
+				font-size: em(18);
+				color: $main-white;
+			}
 		}
 
 }// --end header-section
