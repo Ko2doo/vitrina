@@ -101,9 +101,13 @@
 			color: $main-element-grey;
 		}
 
-	@media screen and (max-width: 36rem){
-		margin-left: auto;
-		margin-right: auto;
-	}
+		@media screen and (max-width: 36rem){
+			margin-left: auto;
+			margin-right: auto;
+		}
 
+}
+
+.mfp-close-btn-in .mfp-close{
+	display: none;
 }

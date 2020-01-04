@@ -77,7 +77,8 @@ gulp.task('css-lib', function(){
     .pipe(addsrc.append('node_modules/font-awesome/css/font-awesome.css'))
     .pipe(addsrc.append('node_modules/magnific-popup/dist/magnific-popup.css'))
     .pipe(concat('libs.css'))
-    .pipe(gulp.dest('app/css'));
+    .pipe(gulp.dest('app/css'))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 // импортируем шрифты себе в проект:
@@ -107,7 +108,8 @@ gulp.task('scripts', function() {
     .pipe(addsrc.append('node_modules/magnific-popup/dist/jquery.magnific-popup.js'))
     .pipe(concat('libs.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('app/js'));
+    .pipe(gulp.dest('app/js'))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 
@@ -165,4 +167,4 @@ gulp.task('default',
      gulp.parallel('clear-cache', 'fonts', 'sass', 'css-lib', 'smart-grid', 'scripts', 'browser-sync', 'watch'));
 
 gulp.task('build',
-     gulp.series('clean', 'clear-cache', 'media-queries', 'css-min', 'prebuild', 'img'));
+     gulp.series('clean', 'clear-cache', 'css-min', 'media-queries', 'prebuild', 'img'));

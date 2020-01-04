@@ -55,12 +55,20 @@ $(function(){
 
 	// Magnific-popup
 	$('.popup-modal').magnificPopup({
-    type: 'inline',
-    preloader: false,
-    removalDelay: 150,
-    mainClass: 'my-mfp-zoom-in',
-    modal: true
+		type: 'inline',
+
+		fixedContentPos: false,
+		fixedBgPos: true,
+
+		overflowY: 'auto',
+
+		closeBtnInside: true,
+		preloader: false,
+		
+		midClick: true,
+		mainClass: 'my-mfp-slide-bottom'
 	});
+
 	$(document).on('click', '.popup-modal-dismiss', function (e) {
 		e.preventDefault();
 		$.magnificPopup.close();
@@ -74,7 +82,6 @@ $(function(){
 		image: {
 			verticalFit: true
 		}
-		
 	});
 
 	$('.image-popup-fit-width').magnificPopup({

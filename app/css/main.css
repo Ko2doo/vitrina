@@ -478,6 +478,10 @@ button {
   }
 }
 
+.mfp-close-btn-in .mfp-close {
+  display: none;
+}
+
 .content-sidebar {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -619,22 +623,6 @@ button {
 .modal-popup .popup-txt {
   margin-top: 0.875em;
   color: #3f4344;
-}
-
-/* padding-bottom and top for image */
-.mfp-no-margins img.mfp-img {
-  padding: 0;
-}
-
-/* position of shadow behind the image */
-.mfp-no-margins .mfp-figure:after {
-  top: 0;
-  bottom: 0;
-}
-
-/* padding for main container */
-.mfp-no-margins .mfp-container {
-  padding: 0;
 }
 
 .header {
