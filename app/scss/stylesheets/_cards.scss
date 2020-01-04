@@ -35,9 +35,20 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			flex-direction: column;
 
 			.head-image{
 				display: inline-flex;
+			}
+
+			.product-description{
+				margin: rem(6) 0 rem(10);
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				text-align: center;
+				@include font(em(20), 500);
 			}
 		}
 		
