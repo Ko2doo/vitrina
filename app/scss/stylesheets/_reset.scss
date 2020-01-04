@@ -1,0 +1,23 @@
+// Сброс и переназначение:
+@include reset();
+
+body,
+html{
+	font-size: 100%;
+	font-family: "Museo-Sans Cyrilic";
+}
+
+a{
+	text-decoration: none;
+}
+
+button{
+	cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@import 'row';

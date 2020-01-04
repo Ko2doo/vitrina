@@ -1,0 +1,12 @@
+.dropdown-menu{
+
+	&.is-open{
+		visibility: visible;
+		display: flex;
+		flex-direction: column;
+		z-index: 600;
+		animation: .5s open-menu;
+		animation-fill-mode: forwards;
+		background-color: $main-black;
+	}
+}

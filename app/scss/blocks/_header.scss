@@ -1,0 +1,18 @@
+.header{
+	padding: rem(8) 0 rem(8);
+	background-color: $main-bg;
+
+		&-content{
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			
+				&__greeting-section{
+					@include font(em(18), 500);
+
+					margin: rem(12) 0 rem(20);
+					color: $main-dark-grey;
+				}
+		}
+
+}// --end header-section
