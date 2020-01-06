@@ -10,6 +10,8 @@
 			@include row-flex();
 			width: 100%;
 			position: relative;
+			margin-left: 0;
+			margin-right: 0;
 		}
 
 		.menu-content{
@@ -33,7 +35,7 @@
 
 						@media screen and (max-width: 62rem){
 							max-width: 70%;
-							left: 20%;
+							left: 15%;
 							top: rem(60);
 						}
 				}

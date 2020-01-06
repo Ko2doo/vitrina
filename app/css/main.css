@@ -809,6 +809,8 @@ button {
   margin-right: -0.9375rem;
   width: 100%;
   position: relative;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .header .menu-content {
@@ -844,7 +846,7 @@ button {
 @media screen and (max-width: 62rem) {
   .header .menu-content.is-open {
     max-width: 70%;
-    left: 20%;
+    left: 15%;
     top: 3.75rem;
   }
 }
