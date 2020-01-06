@@ -1,6 +1,5 @@
 .personal-kab{
 	padding: rem(35) 0 rem(40);
-	background-color: $main-bg;
 
 		.content{
 			@include row-flex();
@@ -64,6 +63,11 @@
 					@include size-md(12);
 					
 					padding: rem(22) 0 0;
+
+					@media screen and (max-width: 62rem){
+						display: flex;
+						margin: 0 auto;
+					}
 				}
 
 				.tabs-item{
@@ -74,7 +78,17 @@
 						&.animate{
 							animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 						}
+
+						@media screen and (max-width: 62rem){
+							margin-left: 0;
+							margin-right: 0;
+						}
 				}
 
+
+			@media screen and (max-width: 62rem){
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}//-- end content
 }//-- end section

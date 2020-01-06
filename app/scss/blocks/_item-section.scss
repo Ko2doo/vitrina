@@ -1,6 +1,5 @@
 .items-section{
 	padding: rem(45) 0 rem(30);
-	background-color: $main-bg;
 
 	.box-items{
 		@include row-flex();
