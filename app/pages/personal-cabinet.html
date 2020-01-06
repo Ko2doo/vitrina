@@ -16,16 +16,15 @@
       <div class="socialmedia-block">
         <ul class="social-media">
           <li class="social-media__li">
-            <a href="#" class="social-media__link"><i class="fa fa-telegram social-icons" aria-hidden="true"></i></a>
+            <a href="#" class="social-media__link" target="_blank"><i class="fa fa-telegram social-icons tg" aria-hidden="true"></i></a>
           </li>
           <li class="social-media__li">
-            <a href="#" class="social-media__link"><i class="fa fa-facebook-square social-icons" aria-hidden="true"></i></a>
+            <a href="#" class="social-media__link" target="_blank"><i class="fa fa-facebook-square social-icons fb" aria-hidden="true"></i></a>
           </li>
           <li class="social-media__li">
-            <a href="#" class="social-media__link"><i class="fa fa-vk social-icons" aria-hidden="true"></i></a>
+            <a href="#" class="social-media__link" target="_blank"><i class="fa fa-vk social-icons vk" aria-hidden="true"></i></a>
           </li>
         </ul>
-     
       </div>
 
       <div class="account-setting">
@@ -34,21 +33,13 @@
             <i class="fa fa-bars" aria-hidden="true"></i>
           </button>
           <nav class="menu-content account-setting__navigation">
-            <a href="../index.html" target="_blank" class="account-setting__link unlogin">
+            <a href="../index.html" target="_blank" class="account-setting__link general-page">
               <i class="fa fa-home link-icon" aria-hidden="true"></i>
               <span class="link-txt">На главную</span>
             </a>
             <a href="#" target="_blank" class="account-setting__link unlogin">
               <i class="fa fa-sign-out link-icon" aria-hidden="true"></i>
               <span class="link-txt">Выход</span>
-            </a>
-            <a href="#" target="_blank" class="account-setting__link unlogin">
-              <i class="fa fa-heart-o link-icon" aria-hidden="true"></i>
-              <span class="link-txt">Избранное</span>
-            </a>
-            <a href="#" target="_blank" class="account-setting__link kabinet">
-              <i class="fa fa-pencil-square-o link-icon" aria-hidden="true"></i>
-              <span class="link-txt">Добавить объявление</span>
             </a>
           </nav>
         </div>
@@ -61,15 +52,143 @@
 	<main class="main-content">
 		<section class="personal-kab">
 			<div class="container">
-				<div class="row">1</div>
+				<div class="content tabs">
+					<h2 class="content__head-item">Персональный кабинет</h2>
+					
+					<aside class="content__aside-section">
+						<p class="user-menu__head-item">меню пользователя</p>
+						<ul class="user-list tab-nav">
+							<li class="user-list__item">
+								<i class="fa fa-user-o user-list__icon-item" aria-hidden="true"></i>
+									<span class="user-name">Имя</span>
+							</li>
+							<li class="user-list__item tap-me">
+								<i class="fa fa-archive user-list__icon-item" aria-hidden="true"></i>
+									<span>Архив объявлений</span>
+							</li>
+							<li class="user-list__item tap-me">
+								<i class="fa fa-pencil-square-o user-list__icon-item" aria-hidden="true"></i>
+									<span>Добавить объявление</span>
+							</li>
+						</ul>
+					</aside>
+
+					<div class="content__item-section">
+						<div class="tabs-item">
+	            <div class="card-item">
+	              <header class="card-head">
+	                <a class="image-popup-vertical-fit" href="../img/cards/1.jpg">
+	                  <img src="../img/cards/1.jpg" alt="image" class="head-image">
+	                </a>
+
+	                <p class="product-description">
+	                  Название или марка товара
+	                </p>
+	              </header>
+
+	              <div class="card-body">
+	                <a href="#box-popup-anim" class="card-item__txt popup-modal">
+	                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, quisquam? Illum, reprehenderit? Magnam repudiandae nam quam odit, ipsa, nemo quia maiores at impedit quis ipsam magni. Ducimus ad adipisci tempora, iste neque.
+	                </a>
+	                <div id="box-popup-anim" class="modal-popup mfp-hide">
+	                  <button class="popup-modal-dismiss" href="#">
+	                    <i class="fa fa-times popup-icon" aria-hidden="true"></i>
+	                  </button>
+
+	                  <div class="popup-content">
+	                    <h3 class="popup-heading">Продукция из Китая</h3>
+	                    <p class="popup-txt">
+	                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, quisquam? Illum, reprehenderit? Magnam repudiandae nam quam odit, ipsa, nemo quia maiores at impedit quis ipsam magni. Ducimus ad adipisci tempora, iste neque.
+	                    </p>
+	                  </div>
+	                  
+	                </div>
+	              </div>
+
+	              <div class="card-tools">
+	                <button class="btn-favorites">
+	                  <i class="fa fa-heart-o icon-circle" aria-hidden="true"></i>
+	                </button>
+	              </div>
+	            </div>
+	            <div class="card-item">
+	              <header class="card-head">
+	                <a class="image-popup-vertical-fit" href="../img/cards/1.jpg">
+	                  <img src="../img/cards/1.jpg" alt="image" class="head-image">
+	                </a>
+
+	                <p class="product-description">
+	                  Название или марка товара
+	                </p>
+	              </header>
+
+	              <div class="card-body">
+	                <a href="#box-popup-anim" class="card-item__txt popup-modal">
+	                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, quisquam? Illum, reprehenderit? Magnam repudiandae nam quam odit, ipsa, nemo quia maiores at impedit quis ipsam magni. Ducimus ad adipisci tempora, iste neque.
+	                </a>
+	                <div id="box-popup-anim" class="modal-popup mfp-hide">
+	                  <button class="popup-modal-dismiss" href="#">
+	                    <i class="fa fa-times popup-icon" aria-hidden="true"></i>
+	                  </button>
+
+	                  <div class="popup-content">
+	                    <h3 class="popup-heading">Продукция из Китая</h3>
+	                    <p class="popup-txt">
+	                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, quisquam? Illum, reprehenderit? Magnam repudiandae nam quam odit, ipsa, nemo quia maiores at impedit quis ipsam magni. Ducimus ad adipisci tempora, iste neque.
+	                    </p>
+	                  </div>
+	                  
+	                </div>
+	              </div>
+
+	              <div class="card-tools">
+	                <button class="btn-favorites">
+	                  <i class="fa fa-heart-o icon-circle" aria-hidden="true"></i>
+	                </button>
+	              </div>
+	            </div>
+
+
+            </div>
+					</div>
+				</div>
 			</div>
 		</section>
 	</main>
 </div>
 
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="info-box">
+        <h3 class="info-box__item-head">Ищите нас:</h3>
+        <ul class="social-media">
+          <li class="social-media__li">
+            <a href="#" class="social-media__link" target="_blank"><i class="fa fa-telegram social-icons tg" aria-hidden="true"></i></a>
+          </li>
+          <li class="social-media__li">
+            <a href="#" class="social-media__link" target="_blank"><i class="fa fa-facebook-square social-icons fb" aria-hidden="true"></i></a>
+          </li>
+          <li class="social-media__li">
+            <a href="#" class="social-media__link" target="_blank"><i class="fa fa-vk social-icons vk" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="copyright-box">
+        <p class="copyright">&copy; 2020 NИ</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 		<!-- script's -onn -->
 	<script src="../js/libs.js"></script>
 	<script src="../js/common.js"></script>
+	<script>
+
+	</script>
+
 		<!-- script's -off -->
 </body>
 </html>

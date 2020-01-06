@@ -107,4 +107,38 @@ $(function(){
 		}
 	});
 
+	//табы:
+	jQuery.fn.lightTabs = function(options){
+
+		var createTabs = function(){
+			tabs = this;
+				 i = 0;
+
+			showPage = function(i){
+			  $(tabs).children("div").children(".tabs-item").hide().removeClass('animate');
+			  $(tabs).children("div").children(".tabs-item").eq(i).show().addClass('animate');
+			  $(tabs).children("aside").children(".tab-nav").children(".tap-me").removeClass("active");
+			  $(tabs).children("aside").children(".tab-nav").children(".tap-me").eq(i).addClass("active");
+			}
+
+			showPage(0);
+
+			$(tabs).children("aside").children(".tab-nav").children(".tap-me").each(function(index, element){
+			  $(element).attr("data-tab", i);
+			  	i++;       
+			});
+
+			$(tabs).children("aside").children(".tab-nav").children(".tap-me").click(function(){
+			  showPage(parseInt($(this).attr("data-tab")));
+			});
+		};
+		return this.each(createTabs);
+	};
+	
+	//инициализация:
+	$(document).ready(function(){
+  	$(".tabs").lightTabs();
+	});
+
+
 });

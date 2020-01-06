@@ -15,6 +15,7 @@
 	position: relative;
 	border-bottom-left-radius: rem(8);
 	border-bottom-right-radius: rem(8);
+	background-color: $main-white;
 	@include transition($easeOut-2s, box-shadow, transform);
 	box-shadow: $box-shadow-static;
 

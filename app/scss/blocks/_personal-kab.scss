@@ -1,0 +1,80 @@
+.personal-kab{
+	padding: rem(35) 0 rem(40);
+	background-color: $main-bg;
+
+		.content{
+			@include row-flex();
+
+				&__head-item{
+					@include font(em(24), 500);
+					display: flex;
+					justify-content: flex-start;
+					flex-grow: 1;
+					width: 100%;
+					margin-bottom: rem(20);
+				}
+
+				&__aside-section{
+					@include col();
+					@include size(3);
+					@include size-lg(12);
+				}
+
+				.user-list{
+					display: flex;
+					flex-direction: column;
+					color: $main-element-grey;
+
+						&__item{
+							display: flex;
+							align-items: center;
+							padding: rem(8) 0 rem(8);
+							border-bottom: 1px solid $main-e1e8;
+
+								& > span{
+									@include font(em(16), 400);
+									cursor: pointer;
+									color: $main-element-grey;
+								}
+
+								.user-name{
+									@include font(em(18), 500);
+								}
+
+								&:last-child{
+									border-bottom: none;
+								}
+						}
+
+						&__icon-item{
+							width: rem(20);
+							font-size: em(14);
+							color: $mark-blue;
+						}
+				}
+
+				.user-menu__head-item{
+					@include font(em(18), 400);
+					margin-bottom: rem(8);
+				}
+
+				&__item-section{
+					@include size(9);
+					@include size-lg(12);
+					@include size-md(12);
+					
+					padding: rem(22) 0 0;
+				}
+
+				.tabs-item{
+					@include row-flex();
+
+					// animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+						&.animate{
+							animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+						}
+				}
+
+		}//-- end content
+}//-- end section

@@ -84,6 +84,7 @@ $easeInOut-3s:   0.3s ease-in-out;
  * ----------------------------------------
  */
 
+// animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 @keyframes scale-up-center {
 	0% {
 	  transform: scale(0.5);
@@ -93,6 +94,7 @@ $easeInOut-3s:   0.3s ease-in-out;
 	}
 }
 
+// animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 @keyframes scale-up-ver-top {
   0% {
     transform: scaleY(0.4);
@@ -125,5 +127,28 @@ $easeInOut-3s:   0.3s ease-in-out;
   100% {
     transform: translateZ(50px) translateY(-12px);
     box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}
+
+
+// animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+@keyframes scale-up-hor-center {
+  0% {
+    transform: scaleX(0.4);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+//animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+@keyframes scale-out-center {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 1;
   }
 }
