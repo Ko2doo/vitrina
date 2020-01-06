@@ -443,6 +443,50 @@ button {
   background-color: #000000;
 }
 
+.dropdown-menu .counter-bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0.5rem 0 0.375rem;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.dropdown-menu .counter-bar__li-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 0 0.5rem 0.75rem;
+}
+
+.dropdown-menu .counter-bar__link-item {
+  position: relative;
+  font-size: 1.875em;
+  color: #fd3a3a;
+}
+
+.dropdown-menu .counter-bar .fav-counter {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.75rem;
+  border-radius: 1.875rem;
+  padding: 0.25rem 0.375rem 0.25rem 0.375rem;
+  font-size: 0.375em;
+  font-weight: 500;
+  background-color: #fd3a3a;
+  color: #ffffff;
+}
+
 .card-item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
