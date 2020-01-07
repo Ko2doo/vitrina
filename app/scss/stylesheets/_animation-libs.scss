@@ -152,3 +152,15 @@ $easeInOut-3s:   0.3s ease-in-out;
     opacity: 1;
   }
 }
+
+//animation: shadow-drop-2-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+@keyframes shadow-drop-2-bottom {
+  0% {
+    transform: translateZ(0) translateY(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: translateZ(rem(8)) translateY(rem(-4));
+    box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}

@@ -65,24 +65,8 @@
 					padding: rem(22) 0 0;
 
 					@media screen and (max-width: 62rem){
-						display: flex;
 						margin: 0 auto;
 					}
-				}
-
-				.tabs-item{
-					@include row-flex();
-
-					// animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-
-						&.animate{
-							animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-						}
-
-						@media screen and (max-width: 62rem){
-							margin-left: 0;
-							margin-right: 0;
-						}
 				}
 
 

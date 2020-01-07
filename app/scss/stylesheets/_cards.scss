@@ -84,6 +84,14 @@
 					&:hover > .icon-circle{
 						color: $main-white;
 					}
+
+					&.active{
+						background-color: $main-orange;
+
+							& > .icon-circle{
+								color: $main-white;
+							}
+					}
 			}
 
 			.icon-circle{

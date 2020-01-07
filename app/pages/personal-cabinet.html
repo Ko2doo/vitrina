@@ -33,6 +33,14 @@
             <i class="fa fa-bars" aria-hidden="true"></i>
           </button>
           <nav class="menu-content account-setting__navigation">
+            <ul class="counter-bar">
+              <li class="counter-bar__li-item">
+                <a href="#" target="_blank" class="counter-bar__link-item">
+                  <i class="fa fa-heart-o counter-bar__icon-item" aria-hidden="true"></i>
+                    <span class="fav-counter">5</span>
+                </a>
+              </li>
+            </ul>
             <a href="../index.html" target="_blank" class="account-setting__link general-page">
               <i class="fa fa-home link-icon" aria-hidden="true"></i>
               <span class="link-txt">На главную</span>
@@ -74,6 +82,7 @@
 					</aside>
 
 					<div class="content__item-section">
+						<!-- первая вкладка -->
 						<div class="tabs-item">
 	            <div class="card-item">
 	              <header class="card-head">
@@ -147,7 +156,25 @@
 	                </button>
 	              </div>
 	            </div>
+            </div>
 
+            <!-- вторая вкладка -->
+            <div class="tabs-item">
+	            <form action="" method="post" class="form">
+	              <div class="form-group">
+	                <label class="form__label-name">Название</label>
+	                <input class="form-control" type="text" name="name">
+	              </div>
+	              <div class="form-group">
+	                <label class="form__label-description">Описание</label>
+	                <textarea class="form-control" rows="3" name="text"></textarea>
+	              </div>
+	              <div class="form-group">
+	                <label class="form__label-image">Изображение</label>
+	                <input class="form-control" type="file" name="img">
+	              </div>
+	              <button type="submit" class="btn-add__post">Добавить</button>
+	            </form>
             </div>
 					</div>
 				</div>
