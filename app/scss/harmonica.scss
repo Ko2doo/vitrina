@@ -1,0 +1,95 @@
+@import "stylesheets/_smart-grid.scss";
+
+/* начало описания гармошки */
+li,ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+.col-md-4{
+	@include col();
+	@include size(4);
+	@include size-md(6);
+	@include size-sm(8);
+}
+
+.harmonica-menu{
+	display: flex;
+	flex-direction: column;
+	max-width: 260px;
+	width: 100%;
+	padding: 0;
+
+		.harmonica-subcontent{
+			display: none;
+			padding: 0;
+		}
+
+		.preview{
+			display: block;
+		}
+		
+			li, a{
+				font-family: "Roboto-MediumItalic";
+				line-height: 1.3;
+			}
+
+
+			.chapters{
+				margin-bottom: 8px;
+			}
+
+			.articles .last,
+			.chapters .last{
+				margin-top: 8px;
+			}
+			
+			.section > a{
+				display: flex;
+				margin-bottom: 8px;
+				padding: 10px 45px 10px 10px;
+				background: linear-gradient(to right, #c3c3c3 59%, #fffffffb 97%);
+				color: #474747;
+			}
+
+			.chapters > a{
+				display: flex;
+				padding: 10px 15px 10px 22px;
+				background: linear-gradient(to right,#d6d6d6 59%,#fffffffb 97%);
+				color: #474747;
+			}
+
+			.articles > a{
+				display: flex;
+				margin-top: 8px;
+				padding: 10px 15px 10px 32px;
+				color: #8a8989;
+
+				&:hover{
+					cursor: pointer;
+					color: #474747;
+					background: linear-gradient(to right,#d2dfef 59%,#f9f9f9 97%);
+				}
+			}
+}
+
+.badge{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: auto;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 10px;
+	background-color: #df7e7b;
+	color: #fff;
+}
