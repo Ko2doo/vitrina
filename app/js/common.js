@@ -140,29 +140,6 @@ $(function(){
   	$(".tabs").lightTabs();
 	});
 
-	//гармошка:
-		// var $ml_menu = $('.harmonica');
-
-		// $ml_menu.find('div:not(:first)').hide();
-
-		// $('.harmonica a').click(function(event) {
-		//   var $current_li = $(this).parent('li:first');
-
-		//   if ( $current_li.children('div').length > 0 ) {
-		//     event.stopPropagation();
-		//     event.preventDefault();
-		//     $current_li.toggleClass('active').find('div:first').slideToggle('slow');
-		//   }
-
-		//   $( $(this).parents('div').get(0) ).find('li').each(function(){
-		//     if ( this != $current_li.get(0) ) {
-	 //      	$(this).removeClass('active');
-		//     }
-		//   });
-
-		// });
-
-
 	/*Код плагина*/
 	  $.fn.liHarmonica = function (params) {
 	    var p = $.extend({
@@ -188,8 +165,13 @@ $(function(){
 
 	      //searchToString
 	      if (p.searchToString) {
-				  jQuery.expr[':'].Contains = function(a,i,m){
+				  jQuery.expr[':'].Contains = function(a,i,m) {
 				      return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+				  };
+
+				  // функция проверки атрибута
+				  $.fn.hasAttr = function(name, value) {
+				  	return this.attr(name, value) !== undefined;
 				  };
 
 		      function filter_list(header, list){
@@ -221,16 +203,43 @@ $(function(){
 		      	$(input)
 		      		.change( function() {
 		      			var filter = $(this).val();
+		      			var map 	= {},
+		      					size 	= 0;
 
 				          if(filter) {
+				            $matches = $(list).find("a:Contains('" + filter + "')").each(function(){
+				            	var group_name = $(this).text();
 
-				            $matches = $(list).find('a:Contains(' + filter + ')').parents();
-				            $matches.closest('a').slideDown(p.speed);
+				            	if ( map[group_name] === undefined ) {
+				            			 map[group_name] = ++size;
+				            	}
+
+				            	$(this).attr('data-found-object', map[group_name]);
+				            }).parents();
+
 				            $('li', list).not($matches).slideUp(p.speed);
-				            $matches.slideDown(p.speed);
+
+				            $matches.each(function() {
+				            	$(this).closest('a').slideDown(p.speed);
+				            	
+				            	$('a[data-found-object=1]').addClass('anchor-el')
+					            	.css({
+					            		background: 'lightcoral',
+					            		color: 'ghostwhite'
+					            	});
+
+				            	$('.anchor-el').on('click', function() {
+													$(this).parent('li').find('ul').children('li').slideDown(p.speed);
+				            		});
+				            		
+				            	$(this).slideDown(p.speed);
+				            });
 
 				          } else {
 				            $(list).find('li').slideDown(p.speed);
+				            $(list).find('a').each(function(){
+				            	$(this).removeAttr("data-found-object").removeClass('anchor-el').removeAttr('style');
+				            });
 				            $(list).find('.harmonica-subcontent').css('display', 'none');
 				          }
 		      					return false;
@@ -263,7 +272,7 @@ $(function(){
 					});
 	      }
 
-	      linkItem.on('click', function () {
+	      linkItem.on('click', function() {
 
 	        if ($(this).next('ul').is(':hidden')) {
 	          $(this).addClass('harOpen');
@@ -288,7 +297,7 @@ $(function(){
 	    onlyOne: true,
 	    speed: 400,
 	    searchToString: true,
-	    badge: true
+	    badge: false
 	  });
 
 });

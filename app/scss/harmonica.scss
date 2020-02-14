@@ -9,19 +9,78 @@ a{
 	text-decoration: none;
 }
 
-.col-md-4{
+.container{
+	@include container();
+
+	width: 100%;
+}
+
+.row{
+	@include row-flex();
+}
+
+.col-3{
 	@include col();
-	@include size(4);
+	@include size(3);
 	@include size-md(6);
-	@include size-sm(8);
+	@include size-sm(12);
+}
+
+.col-9{
+	@include col();
+	@include size(9);
+	@include size-md(9);
+	@include size-sm(12);
+}
+
+.blabla{
+	margin-top: 1000px;
+}
+
+
+.search-block{
+
+		.filter_form{
+
+		}
+
+		.filter_input{
+			display: flex;
+			margin: 0 auto 10px auto;
+			padding: 8px 14px;
+			max-width: 250px;
+			width: 100%;
+			outline: none;
+			border-radius: 8px;
+			border: 1px solid #638abd;
+		}
 }
 
 .harmonica-menu{
 	display: flex;
 	flex-direction: column;
-	max-width: 260px;
 	width: 100%;
 	padding: 0;
+	margin-top: 12px;
+	margin-bottom: 0;
+
+		.badge{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: auto;
+		  padding: 3px 7px;
+		  font-size: 12px;
+		  font-weight: bold;
+		  line-height: 1;
+		  color: #fff;
+		  text-align: center;
+		  white-space: nowrap;
+		  vertical-align: middle;
+		  border-radius: 10px;
+			background-color: #df7e7b;
+			color: #fff;
+		}
 
 		.harmonica-subcontent{
 			display: none;
@@ -74,22 +133,4 @@ a{
 					background: linear-gradient(to right,#d2dfef 59%,#f9f9f9 97%);
 				}
 			}
-}
-
-.badge{
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	margin-left: auto;
-  padding: 3px 7px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 1;
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  border-radius: 10px;
-	background-color: #df7e7b;
-	color: #fff;
 }

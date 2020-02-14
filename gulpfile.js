@@ -1,6 +1,5 @@
 var gulp          = require('gulp'),
     sass          = require('gulp-sass'),
-    addsrc        = require('gulp-add-src'),
     smartgrid     = require('smart-grid'),
     browserSync   = require('browser-sync'),
     gcmq          = require('gulp-group-css-media-queries'),
@@ -71,11 +70,25 @@ gulp.task('css-min', function() {
     .pipe(gulp.dest('build/css'));
 });
 
+
+// если снова перестанет конкатенировать файлы по порядку, то установить: npm i gulp-add-src --save-dev, и расскоментрировать строчки
+// gulp.task('css-lib', function(){
+//   return gulp.src('node_modules/normalize.css/normalize.css')
+//     .pipe(addsrc.append('node_modules/aos/dist/aos.css'))
+//     .pipe(addsrc.append('node_modules/font-awesome/css/font-awesome.css'))
+//     .pipe(addsrc.append('node_modules/magnific-popup/dist/magnific-popup.css'))
+//     .pipe(concat('libs.css'))
+//     .pipe(gulp.dest('app/css'))
+//     .pipe(browserSync.reload({stream: true}));
+// });
+
 gulp.task('css-lib', function(){
-  return gulp.src('node_modules/normalize.css/normalize.css')
-    .pipe(addsrc.append('node_modules/aos/dist/aos.css'))
-    .pipe(addsrc.append('node_modules/font-awesome/css/font-awesome.css'))
-    .pipe(addsrc.append('node_modules/magnific-popup/dist/magnific-popup.css'))
+  return gulp.src([
+      'node_modules/normalize.css/normalize.css',
+      'node_modules/aos/dist/aos.css',
+      'node_modules/font-awesome/css/font-awesome.css',
+      'node_modules/magnific-popup/dist/magnific-popup.css'
+      ])
     .pipe(concat('libs.css'))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({stream: true}));
@@ -102,10 +115,22 @@ gulp.task('browser-sync', function() {
 });
 
 //Таск для всех сприптов
+// gulp.task('scripts', function() {
+//   return gulp.src(['node_modules/jquery/dist/jquery.js'])
+//     .pipe(addsrc.append('node_modules/aos/dist/aos.js'))
+//     .pipe(addsrc.append('node_modules/magnific-popup/dist/jquery.magnific-popup.js'))
+//     .pipe(concat('libs.js'))
+//     .pipe(uglify())
+//     .pipe(gulp.dest('app/js'))
+//     .pipe(browserSync.reload({stream: true}));
+// });
+
 gulp.task('scripts', function() {
-  return gulp.src(['node_modules/jquery/dist/jquery.js'])
-    .pipe(addsrc.append('node_modules/aos/dist/aos.js'))
-    .pipe(addsrc.append('node_modules/magnific-popup/dist/jquery.magnific-popup.js'))
+  return gulp.src([
+      'node_modules/jquery/dist/jquery.js',
+      'node_modules/aos/dist/aos.js',
+      'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+      ])
     .pipe(concat('libs.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))
